@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Posts</title>
+    <style type="text/css">
+      .photo {
+        border-radius: 10px;
+        border-style: solid;
+        padding: 10px;
+        background-color: skyblue;
+      }
+      
+      nav {
+        background-color: pink;
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+      }
+      
+      #photo-space {
+        bbackground-color: gray;
+        margin-top: 100px;
+      }
+    </style>
+    
+    <script type="text/javascript" charset="utf-8">
+    
+      function add() {
+    
+      //creating required DOM elements
+      var photoBlock = document.createElement("div");
+      var newPic = document.createElement("img");
+      var br = document.createElement("br");
+      var br_ = document.createElement("br");
+      var newButton = document.createElement("button");
+      var photoSpace = document.getElementById("photo-space");
+      
+      
+      //assignment of properties to sub divisions
+      var link = "https://picsum.photos/200/";
+      var height = Math.floor(Math.random() * 400) + 200;
+      link = link + height;
+      console.log(link);
+      
+      newPic.src = link;
+      
+      newButton.innerHTML = "Download";
+      
+      //appending all elements to the div
+      photoBlock.appendChild(newPic);
+      photoBlock.appendChild(br);
+      photoBlock.appendChild(br_);
+      photoBlock.appendChild(newButton);
+      
+      
+      
+      //adding styles
+      photoBlock.style.backgroundColor = "skyblue";
+      photoBlock.style.borderStyle = "solid";
+      photoBlock.style.borderRadius = "10px";
+      photoBlock.style.padding = "10px";
+      photoBlock.align = 'center';
+      
+      photoSpace.appendChild(photoBlock);
+      photoSpace.appendChild(document.createElement("br"));
+      }
+      
+    </script>
+    
+  </head>
+  <body>
+      <nav align = 'center'>
+        <h1>Random Photo Generator</h1>
+        <button onclick="add();">Load Photo</button>
+      </nav>
+      <br />
+      <div id="photo-space">
+        <div align = 'center' id="photo" class="photo">
+          <img src="https://picsum.photos/200/200" alt="photo" />
+          <br /> <br />
+          <button type="submit">Download</button>
+        </div>
+        <br />
+      </div>
+      
+  </body>
+</html>
