@@ -1,0 +1,35 @@
+div.profile-pic {
+  text-align: center;
+}
+
+div.username {
+  color: red;
+  font-size: 15px;
+  text-align: center;
+  
+}
+
+.nav-bar {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+#a {
+  float: left;
+  display: inline-block;
+}
+
+#b {
+  text-align-last: center;
+  display: inline-block;
+}
+
+#c {
+  float: right;
+  display: inline-block;
+}
+
+img {
+  border-radius: 50%;
+}
